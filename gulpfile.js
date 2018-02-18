@@ -7,7 +7,7 @@ const gzip = require('gulp-gzip');
 gulp.task('default', function() {
     gulp.src('./resnet/output_keras/**/*')
         .pipe(gzip())
-        .pipe(gulp.dest('./resnet'));
+        .pipe(gulp.dest('./resnet/output_keras'));
     return gulp.src('./js/**/*.js')
         .pipe(concat('bundle.js'))
         .pipe(uglify())
